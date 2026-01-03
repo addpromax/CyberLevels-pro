@@ -56,14 +56,7 @@ public final class CyberLevels extends JavaPlugin {
         CoreSettings settings = core.coreSettings();
         settings.setBootColor('d');
         settings.setBootLogo(
-                "&d╭━━━╮&7╱╱╱&d╭╮&7╱╱╱╱╱╱&d╭╮&7╱╱╱╱╱╱╱╱╱╱╱&d╭╮",
-                "&d┃╭━╮┃&7╱╱╱&d┃┃&7╱╱╱╱╱╱&d┃┃&7╱╱╱╱╱╱╱╱╱╱╱&d┃┃",
-                "&d┃┃&7╱&d╰╋╮&7╱&d╭┫╰━┳━━┳━┫┃&7╱╱&d╭━━┳╮╭┳━━┫┃╭━━╮",
-                "&d┃┃&7╱&d╭┫┃&7╱&d┃┃╭╮┃┃━┫╭┫┃&7╱&d╭┫┃━┫╰╯┃┃━┫┃┃━━┫",
-                "&d┃╰━╯┃╰━╯┃╰╯┃┃━┫┃┃╰━╯┃┃━╋╮╭┫┃━┫╰╋━━┃",
-                "&d╰━━━┻━╮╭┻━━┻━━┻╯╰━━━┻━━╯╰╯╰━━┻━┻━━╯",
-                "&7╱╱╱╱&d╭━╯┃  &7Authors: &f" + getAuthors(),
-                "&7╱╱╱╱&d╰━━╯  &7Version: &f" + this.getDescription().getVersion()
+                "&dCyberLevels &7v" + this.getDescription().getVersion()
         );
 
         core.loadStart(false);
@@ -94,7 +87,6 @@ public final class CyberLevels extends JavaPlugin {
                 new DoubleLevelSystem(this) :
                 new BigDecimalLevelSystem(this);
 
-        logger("&dChecking level system type...");
         levelSystem = system;
 
         logger(

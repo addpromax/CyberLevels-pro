@@ -353,17 +353,10 @@ final class UserManagerImpl<N extends Number> implements UserManager<N> {
         autoSaveTask = (new BukkitRunnable() {
             @Override
             public void run() {
-                long start = System.currentTimeMillis();
                 main.userManager().saveOnlinePlayers(false);
 
                 if (config.syncLeaderboardOnAutoSave())
                     system.getLeaderboard().update();
-
-                if (config.isMessagesOnAutoSave())
-                    cache.lang().sendMessage(
-                            null, Lang::getAutoSave, "ms",
-                            System.currentTimeMillis() - start
-                    );
 
                 startAutoSave();
             }
